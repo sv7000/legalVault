@@ -28,13 +28,14 @@ export default function HeroSection() {
               </Button>
             </div>
           </motion.div>
+
           <motion.div
-            className="flex-1"
+            className="flex-1 w-full"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-xl">
+            <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-xl min-w-[200px]">
               <Image
                 src="/hero-legal.jpg"
                 alt="Legal professionals in a meeting"
