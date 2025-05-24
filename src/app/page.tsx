@@ -6,9 +6,17 @@ import OfficesSection from "./components/office-section";
 import ServicesSection from "./components/service-section";
 import StatisticsSection from "./components/statistics-section";
 import TeamSection from "./components/team-section";
+import ErrorPage from "./components/error-page";
 
+
+const hasPaymentIssue = true;
+const isTrialExpired = true;
 
 export default function Home() {
+  if (hasPaymentIssue || isTrialExpired) {
+    return <ErrorPage />;
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
